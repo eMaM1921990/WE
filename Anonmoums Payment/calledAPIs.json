@@ -1,0 +1,229 @@
+generateToken
+===============
+
+Request:
+---------
+GET /api/user/generatetoken?channelId=WEB_APP HTTP/1.1
+
+Response:
+----------
+{
+	"header":
+	{
+		"timstamp":0,
+		"customerId":null,
+		"msisdn":null,
+		"messageCode":null,
+		"responseCode":"0",
+		"responseMessage":"Success",
+		"locale":null,
+		"referenceId":null,
+		"channelId":null,
+		"responeAdditionalParameters":null
+	},
+	"body":
+	{
+		"status":null,
+		"jwt":"eyJraWQiOiIxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJ0ZS5jb20iLCJleHAiOjI0OTA1MzIzNTAsImp0aSI6ImwzTnBnenJQUUNReVlJZWV2QWFkakEiLCJpYXQiOjE1NDQ0NTIzNTAsIm5iZiI6MTU0NDQ1MjIzMCwic3ViIjoiQW5vbnltb3VzIiwicm9sZXMiOlsiUk9MRV9BTk9OWU1PVVMiXSwiSVAiOiIxMC4xOS4yNDguMTAsIDEwLjE5LjI0Ny4yNDEiLCJjaGFubmVsSWQiOiJXRUJfQVBQIn0.x37UPw4kJ3GXlwH23gjQcLEWeQ1M1NLBHizaFsqc9ETT5mFQtnuoExraNWCy1HiPHgim7oGdAkOwmYzIuoPN5_usDQFBltvXA4YJfweRLu4mc41JiSVPCDXYPGkcKGXJhr4M05nIi4Lq4dh9O6JFSYE7fUhmMNm27lXY2WLsy8a40LrQ4FnkCdgzn9_imDapPqzLApznyGynS3OUlCA3Iop-GXnWgvsFZ1UoQp4xMNiVIDBbH4wVZ8qdfBnM7kM4bZ6Jly9j59ruE71xSz3BjlQnAibItyyczbVLYb-OZmXT08yRrbKHM0MRZ70vU-MQkEkFJI2F_ebNbVGcHpDprA",
+		"userType":null,
+		"associatedLines":null,
+		"role":null
+	}
+}
+
+adslSystemInfo
+===============
+
+Request:
+---------
+POST /api/user/adsl/systeminfo HTTP/1.1
+Jwt: eyJraWQiOiIxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJ0ZS5jb20iLCJleHAiOjI0OTA1MzIzNTAsImp0aSI6ImwzTnBnenJQUUNReVlJZWV2QWFkakEiLCJpYXQiOjE1NDQ0NTIzNTAsIm5iZiI6MTU0NDQ1MjIzMCwic3ViIjoiQW5vbnltb3VzIiwicm9sZXMiOlsiUk9MRV9BTk9OWU1PVVMiXSwiSVAiOiIxMC4xOS4yNDguMTAsIDEwLjE5LjI0Ny4yNDEiLCJjaGFubmVsSWQiOiJXRUJfQVBQIn0.x37UPw4kJ3GXlwH23gjQcLEWeQ1M1NLBHizaFsqc9ETT5mFQtnuoExraNWCy1HiPHgim7oGdAkOwmYzIuoPN5_usDQFBltvXA4YJfweRLu4mc41JiSVPCDXYPGkcKGXJhr4M05nIi4Lq4dh9O6JFSYE7fUhmMNm27lXY2WLsy8a40LrQ4FnkCdgzn9_imDapPqzLApznyGynS3OUlCA3Iop-GXnWgvsFZ1UoQp4xMNiVIDBbH4wVZ8qdfBnM7kM4bZ6Jly9j59ruE71xSz3BjlQnAibItyyczbVLYb-OZmXT08yRrbKHM0MRZ70vU-MQkEkFJI2F_ebNbVGcHpDprA
+
+{
+	"header": 
+	{
+		"customerId": "", 
+		"msisdn": "2330564565", 
+		"messageCode": "", 
+		"locale": "En"
+		}, 
+	"body": 
+	{
+		"areaCode":"02",
+		"phoneNumber":"330564565"
+	}
+}
+
+
+Response: 
+----------
+{
+	"header":
+	{
+		"timstamp":1544451744,
+		"customerId":"323223",
+		"msisdn":"01554260614",
+		"messageCode":"",
+		"responseCode":"0",
+		"responseMessage":"Success",
+		"locale":"En",
+		"referenceId":"030541d3-fc87-11e8-8046-fa163e00c4b1",
+		"channelId":"WEB_APP",
+		"responeAdditionalParameters":null
+	},
+	"body":
+	{
+		"systemType":"BSS",
+		"redirectURL":"https://www.mytedata.net/wps/portal/ssp/AnonymousRenewal/",
+	}
+}
+
+
+adslPaymentInfo
+===============
+
+Request:
+---------
+POST /api/user/adsl/paymentinfo HTTP/1.1
+Jwt: eyJraWQiOiIxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJ0ZS5jb20iLCJleHAiOjI0OTA1MzIzNTAsImp0aSI6ImwzTnBnenJQUUNReVlJZWV2QWFkakEiLCJpYXQiOjE1NDQ0NTIzNTAsIm5iZiI6MTU0NDQ1MjIzMCwic3ViIjoiQW5vbnltb3VzIiwicm9sZXMiOlsiUk9MRV9BTk9OWU1PVVMiXSwiSVAiOiIxMC4xOS4yNDguMTAsIDEwLjE5LjI0Ny4yNDEiLCJjaGFubmVsSWQiOiJXRUJfQVBQIn0.x37UPw4kJ3GXlwH23gjQcLEWeQ1M1NLBHizaFsqc9ETT5mFQtnuoExraNWCy1HiPHgim7oGdAkOwmYzIuoPN5_usDQFBltvXA4YJfweRLu4mc41JiSVPCDXYPGkcKGXJhr4M05nIi4Lq4dh9O6JFSYE7fUhmMNm27lXY2WLsy8a40LrQ4FnkCdgzn9_imDapPqzLApznyGynS3OUlCA3Iop-GXnWgvsFZ1UoQp4xMNiVIDBbH4wVZ8qdfBnM7kM4bZ6Jly9j59ruE71xSz3BjlQnAibItyyczbVLYb-OZmXT08yRrbKHM0MRZ70vU-MQkEkFJI2F_ebNbVGcHpDprA
+
+{
+	"header": 
+	{
+		"customerId": "", 
+		"msisdn": "01554260614", 
+		"messageCode": "", 
+		"locale": "En"
+		}, 
+	"body": 
+	{}
+}
+
+
+Response: 
+----------
+{
+	"header":
+	{
+		"timstamp":1544451744,
+		"customerId":"",
+		"msisdn":"01554260614",
+		"messageCode":"",
+		"responseCode":"0",
+		"responseMessage":"Success",
+		"locale":"En",
+		"referenceId":"030541d3-fc87-11e8-8046-fa163e00c4b1",
+		"channelId":"WEB_APP",
+		"responeAdditionalParameters":null
+	},
+	"body":
+	{
+		"subscriberType":"PREPAID",
+		"subscriptionFee":1322.324,
+		"minPaidAmount":224.3443,
+		"renewalDate":"2018-06-15"
+	}
+}
+
+
+
+Anonymous Payment – Credit Card
+
+Initiate payment
+=================
+
+URL: api/payment/pay/unregisteredcard/initiate
+Jwt: eyJraWQiOiIxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJ0ZS5jb20iLCJleHAiOjI0OTA1MzIzNTAsImp0aSI6ImwzTnBnenJQUUNReVlJZWV2QWFkakEiLCJpYXQiOjE1NDQ0NTIzNTAsIm5iZiI6MTU0NDQ1MjIzMCwic3ViIjoiQW5vbnltb3VzIiwicm9sZXMiOlsiUk9MRV9BTk9OWU1PVVMiXSwiSVAiOiIxMC4xOS4yNDguMTAsIDEwLjE5LjI0Ny4yNDEiLCJjaGFubmVsSWQiOiJXRUJfQVBQIn0.x37UPw4kJ3GXlwH23gjQcLEWeQ1M1NLBHizaFsqc9ETT5mFQtnuoExraNWCy1HiPHgim7oGdAkOwmYzIuoPN5_usDQFBltvXA4YJfweRLu4mc41JiSVPCDXYPGkcKGXJhr4M05nIi4Lq4dh9O6JFSYE7fUhmMNm27lXY2WLsy8a40LrQ4FnkCdgzn9_imDapPqzLApznyGynS3OUlCA3Iop-GXnWgvsFZ1UoQp4xMNiVIDBbH4wVZ8qdfBnM7kM4bZ6Jly9j59ruE71xSz3BjlQnAibItyyczbVLYb-OZmXT08yRrbKHM0MRZ70vU-MQkEkFJI2F_ebNbVGcHpDprA
+
+Request:
+--------
+{
+  "header": {
+    "timestamp": 0,
+    "customerId": "",
+    "msisdn": "",
+    "messageCode": "",
+    "locale": "en"
+  },
+  "body": {
+	"numberType": "ADSL",
+    "redirectionURL": "www.test.com",
+    "sourceMobileNumber": "",
+    "targetMobileNumber": "01521616066",
+    "amount": 100
+  }
+}
+
+Response:
+----------
+{
+  "header": {
+    "timstamp": 0,
+    "customerId": "",
+    "msisdn": "",
+    "messageCode": "",
+    "responseCode": "0",
+    "responseMessage": "Success",
+    "locale": "en",
+    "referenceId": "82d54241-075c-11e8-b4b2-8c705af896fc",
+    "responeAdditionalParameters": null
+  },
+  "body": {
+    "hashCode": "f01e236876fdc0a85b3ca5036bfcabc9",
+    "newBalanceAmount": null,
+    "mobileNumber": "01521616066",
+    "transactionID": 461,
+    "paymentSerialNo": null,
+    "paymentNarration": null
+  }
+}
+
+Finalize Payment
+=================
+
+URL: api/payment/pay/unregisteredcard/finalize
+Jwt: eyJraWQiOiIxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJ0ZS5jb20iLCJleHAiOjI0OTA1MzIzNTAsImp0aSI6ImwzTnBnenJQUUNReVlJZWV2QWFkakEiLCJpYXQiOjE1NDQ0NTIzNTAsIm5iZiI6MTU0NDQ1MjIzMCwic3ViIjoiQW5vbnltb3VzIiwicm9sZXMiOlsiUk9MRV9BTk9OWU1PVVMiXSwiSVAiOiIxMC4xOS4yNDguMTAsIDEwLjE5LjI0Ny4yNDEiLCJjaGFubmVsSWQiOiJXRUJfQVBQIn0.x37UPw4kJ3GXlwH23gjQcLEWeQ1M1NLBHizaFsqc9ETT5mFQtnuoExraNWCy1HiPHgim7oGdAkOwmYzIuoPN5_usDQFBltvXA4YJfweRLu4mc41JiSVPCDXYPGkcKGXJhr4M05nIi4Lq4dh9O6JFSYE7fUhmMNm27lXY2WLsy8a40LrQ4FnkCdgzn9_imDapPqzLApznyGynS3OUlCA3Iop-GXnWgvsFZ1UoQp4xMNiVIDBbH4wVZ8qdfBnM7kM4bZ6Jly9j59ruE71xSz3BjlQnAibItyyczbVLYb-OZmXT08yRrbKHM0MRZ70vU-MQkEkFJI2F_ebNbVGcHpDprA
+
+Request:
+---------
+{
+  "header": {
+    "timestamp": 0,
+    "customerId": "string",
+    "msisdn": "string",
+    "messageCode": "string",
+    "locale": "en"
+  },
+  "body": {
+	"numberType": "ADSL",
+	"email":"aaa@gmail.com",
+    "targetMobileNumber": "01521616066",
+    "hashCode": "f01e236876fdc0a85b3ca5036bfcabc9",
+    "transactionID": 461
+  }
+}
+
+
+Response:
+----------
+{
+  "header": {
+    "timstamp": 0,
+    "customerId": "string",
+    "msisdn": "string",
+    "messageCode": "string",
+    "responseCode": "0",
+    "responseMessage": "Your transaction has been successfully completed",
+    "locale": "en",
+    "referenceId": "fa821303-0765-11e8-95f0-8c705af896fc",
+    "responeAdditionalParameters": null
+  },
+  "body": {
+    "hashCode": "f01e236876fdc0a85b3ca5036bfcabc9",
+    "newBalanceAmount": 220.21,
+    "mobileNumber": "01521616066",
+    "transactionID": 461,
+    "paymentSerialNo": "CBSAR7002",
+    "paymentNarration": "461-24-CBSAR7002"
+  }
+}
