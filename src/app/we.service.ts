@@ -25,11 +25,7 @@ export class WeService {
 
   callADSLPaymentInfoService(body) {
     let token = localStorage.getItem('token');
-    this.http.post(this.apiURL + '/api/user/adsl/systeminfo', body , {
-      headers:[{
-
-      }]
-    }).subscribe(
+    this.http.post(this.apiURL + '/api/user/adsl/systeminfo', body ).subscribe(
       (res) => {
         if (res) {
           return res['body']['jwt'];
