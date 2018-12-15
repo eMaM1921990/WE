@@ -1,24 +1,17 @@
 import {Routes} from '@angular/router';
-import {RechargeComponent} from './recharge/recharge.component';
-import {InternetComponent} from './internet/internet.component';
-import {BssComponent} from './bss/bss.component';
-import {RenewalComponent} from './renewal/renewal.component';
+import {LandingComponent} from './landing/landing.component';
+import {ParentComponent} from './parent/parent.component';
+import {AsdlPaymentComponent} from './parent/asdl-payment/asdl-payment.component';
 
 export const appRoutes: Routes = [
   {
-    path: 'recharge',
-    component: RechargeComponent
-  },
+    path: '', component: LandingComponent
+  }
+  ,
   {
-    path: 'internet-rechagre',
-    component: InternetComponent
-  },
-  {
-    path: 'bss',
-    component: BssComponent
-  },
-  {
-    path: 'renewal',
-    component: RenewalComponent
-  },
+    path: 'we' , component: ParentComponent, children: [
+      {path: 'asdl-payment', component: AsdlPaymentComponent}
+
+    ]
+  }
 ];

@@ -2,26 +2,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RechargeComponent } from './recharge/recharge.component';
-import { InternetComponent } from './internet/internet.component';
-import { BssComponent } from './bss/bss.component';
-import { RenewalComponent } from './renewal/renewal.component';
+
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './routerConfig';
+import {HttpClientModule} from '@angular/common/http';
+import {WeService} from './we.service';
+import { HeaderComponent } from './parent/header/header.component';
+import { FooterComponent } from './parent/footer/footer.component';
+import { LandingComponent } from './landing/landing.component';
+import { ParentComponent } from './parent/parent.component';
+import { AsdlPaymentComponent } from './parent/asdl-payment/asdl-payment.component';
+import { MatRadioModule} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RechargeComponent,
-    InternetComponent,
-    BssComponent,
-    RenewalComponent
+
+    HeaderComponent,
+    FooterComponent,
+    LandingComponent,
+    ParentComponent,
+    AsdlPaymentComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    MatRadioModule
   ],
-  providers: [],
+  providers: [WeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
