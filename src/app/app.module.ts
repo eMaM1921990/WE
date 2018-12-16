@@ -12,7 +12,7 @@ import { FooterComponent } from './parent/footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
 import { ParentComponent } from './parent/parent.component';
 import { AsdlPaymentComponent } from './parent/asdl-payment/asdl-payment.component';
-import { MatRadioModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { MatRadioModule} from '@angular/material';
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    MatRadioModule
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [WeService],
   bootstrap: [AppComponent]

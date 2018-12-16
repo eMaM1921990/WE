@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-asdl-payment',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsdlPaymentComponent implements OnInit {
 
-  constructor() { }
+  verifyLandLine = {
+    'govCode': '',
+    'landLine': '',
+    'email': ''
+  };
 
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+
+  }
+
+  onSubmit(onSubmit: NgForm){
+    console.log(onSubmit.value);
+  }
 }
