@@ -10,41 +10,54 @@
 
       <div class="divider-lg"></div>
 
+
+        <form class="example-container" >
       <div class="row">
           <div class="col-md-4">
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Governarate</label>
-              <select class="form-control" id="exampleFormControlSelect1"  required name="govCode" #govCode="ngModel" [(ngModel)]="verifyLandLine.govCode">
-                <option>Giza</option>
-                <option>Qahera</option>
-                <option>Alex</option>
 
-              </select>
-            </div>
+
+
+            <mat-form-field appearance="outline">
+              <mat-label>Governments</mat-label>
+              <mat-select placeholder="Select Government">
+                <mat-option value="option">Option1</mat-option>
+                <mat-option value="option">Option2</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+
+
           </div>
 
           <div class="col-md-4">
 
-            <div class="form-group">
-              <label>Landline number</label>
-              <input type="number" class="form-control" placeholder="Phone number"  required minlength="6" maxlength="10"
-                      name="landLine" #landLine="ngModel" [(ngModel)]="verifyLandLine.landLine">
-            </div>
 
-            <div *ngIf="landLine.invalid && (landLine.dirty || landLine.touched)"
-                 class="alert alert-danger">
 
-              <div *ngIf="landLine.errors.required">
-                Name is required.
-              </div>
-              <div *ngIf="landLine.errors.minlength">
-                Name must be at least 4 characters long.
-              </div>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Landline number</mat-label>
+              <input matInput placeholder="Phone number"  type="tel" required minlength="6" maxlength="10"
+                     name="landLine" #landLine="ngModel" [(ngModel)]="verifyLandLine.landLine">
+              <mat-error *ngIf="landLine.invalid && (landLine.dirty || landLine.touched)">
+
+                <div *ngIf="landLine.errors.required">
+                  Number is required.
+                </div>
+                <div *ngIf="landLine.errors.minlength">
+                  Number must be at least 7 characters long.
+                </div>
+
+
+              </mat-error>
+            </mat-form-field>
+
+
+
 
             </div>
           </div>
 
-      </div>
+
 
       <div class="row">
 
@@ -62,10 +75,17 @@
 
 
       <button type="submit" class=" btn inline-block ">Verify Number</button>
+        </form>
+
+
     </div>
 
 </form>
     <!--page content end-->
 
   </div>
+
+
+
+
 </main>

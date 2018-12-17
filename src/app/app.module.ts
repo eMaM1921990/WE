@@ -13,6 +13,8 @@ import { LandingComponent } from './landing/landing.component';
 import { ParentComponent } from './parent/parent.component';
 import { AsdlPaymentComponent } from './parent/asdl-payment/asdl-payment.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MaterialModule} from './material.module';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    MaterialModule,
   ],
   providers: [WeService],
   bootstrap: [AppComponent]
