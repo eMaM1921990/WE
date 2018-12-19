@@ -19,9 +19,9 @@ export class WeService {
 
   callADSLSystemInfoService(body) {
     let token = localStorage.getItem('token');
-    let headers = new Headers();
-    headers.append('Jwt', token);
-    return this.http.post(this.apiURL + '/api/user/adsl/systeminfo', body, headers);
+    // let headers = new Headers();
+    // headers.append('Jwt', token);
+    // return this.http.post(this.apiURL + '/api/user/adsl/systeminfo', body, headers);
   }
 
 

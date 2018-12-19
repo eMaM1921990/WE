@@ -41,14 +41,14 @@ export class AsdlPaymentComponent implements OnInit {
 
   ngOnInit() {
 
-    this.weService.generateToken().subscribe(
+/*    this.weService.generateToken().subscribe(
       (res) => {
         const response = res.body;
         this.token = response.body.jwt;
         localStorage.setItem('token', this.token);
 
       }
-    );
+    );*/
     console.log(this.token);
   }
 

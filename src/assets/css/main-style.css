@@ -412,3 +412,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 #content-block{ background: #fff; border: 1px solid rgba(0,0,0,.24); width: 95%; margin: 0 auto;  padding: 1.9em}
 
 #content-block h3{ color: #702283 }
+
+.one-one .text-height{ color: #1d1d1d !important;}
+.btn{line-height:35px;font-size: 15px;}
+.link{ color: #2b2a2a}
