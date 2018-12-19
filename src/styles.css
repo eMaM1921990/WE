@@ -3,7 +3,10 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "assets/css/main-style.css";
-
+@import "https://use.fontawesome.com/releases/v5.6.1/css/all.css";
 
 
 .mat-form-field{  width: 100%;}
+
+
+.footer__column__title {margin-bottom: 13px;}
