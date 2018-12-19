@@ -10,7 +10,17 @@
 
         <div class="divider-lg"></div>
 
+        <div class="alert">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>The landline number you entered does not exist.</strong>
 
+
+
+          Please check the number and try again.
+          <p>For help call 111/19777 or click here for live support.</p>
+        </div>
+
+        <div class="divider-lg"></div>
         <form class="example-container" #verifyLandline="ngForm" novalidate (submit)="onSubmit(verifyLandline)">
           <div class="row">
             <div class="col-md-4">
