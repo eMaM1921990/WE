@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {WeService} from '../../we.service';
+import {ADSLSystemInfo, TokenModel} from '../../API/Models';
+import {Router} from '@angular/router';
 
 declare function require(url: string);
 
@@ -34,22 +36,20 @@ export class AsdlPaymentComponent implements OnInit {
       }
   };
 
+  tokenModel: TokenModel;
+  adslSysInfo: ADSLSystemInfo;
 
-  constructor(private weService: WeService) {
+  constructor(private weService: WeService, private router: Router,) {
 
   }
 
   ngOnInit() {
 
-/*    this.weService.generateToken().subscribe(
+    this.weService.generateToken().subscribe(
       (res) => {
-        const response = res.body;
-        this.token = response.body.jwt;
-        localStorage.setItem('token', this.token);
-
+        this.tokenModel = res.body;
       }
-    );*/
-    console.log(this.token);
+    );
   }
 
   onSubmit(onSubmit: NgForm) {
@@ -58,21 +58,25 @@ export class AsdlPaymentComponent implements OnInit {
     this.asdlSystemInfo.header.msisdn = this.verifyLandLine.landLine;
     this.asdlSystemInfo.body.phoneNumber = this.verifyLandLine.landLine;
     this.asdlSystemInfo.body.areaCode = this.verifyLandLine.govCode;
-    console.log(this.asdlSystemInfo);
+    this.router.navigate(['/we/asdl-renewal']);
 
-    window.location.href = 'https://www.mytedata.net/wps/portal/ssp/AnonymousRenewal/';
+    this.weService.callADSLSystemInfoService(this.asdlSystemInfo)
+      .subscribe((res) => {
+          if (res.ok) {
+            this.adslSysInfo = res.body;
+            if (this.adslSysInfo.body.systemType === 'BSS') {
+              this.router.navigate(['/we/asdl-renewal']);
+            } else if (this.adslSysInfo.body.systemType === 'Simba') {
+              window.location.href = this.adslSysInfo.body.redirectURL;
+            } else {
+            }
+          } else {
+            this.router.navigate(['/we/asdl-renewal']);
 
-    // this.weService.callADSLSystemInfoService(this.asdlSystemInfo).subscribe((res) => {
-    //   console.log(res);
-    //   const response = res.body;
-    //   if (response.body.systemType === 'BSS') {
-    //
-    //   } else if (response.body.systemType === 'Simba') {
-    //     window.location.href = response.body.redirectURL;
-    //   } else {
-    //
-    //   }
-    // });
+          }
+
+        }
+      );
 
 
   }

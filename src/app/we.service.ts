@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
 import {environment} from '../environments/environment';
+import {ADSLSystemInfo, TokenModel} from './API/Models';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,16 +14,21 @@ export class WeService {
   constructor(private http: HttpClient) {
   }
 
-  generateToken() {
-    return this.http.get(this.apiURL + '/api/user/generatetoken?channelId=WEB_APP', {observe: 'response'});
+  generateToken(): Observable<HttpResponse<TokenModel>> {
+    return this.http.get<TokenModel>(this.apiURL + '/api/user/generatetoken?channelId=WEB_APP', {observe: 'response'});
   }
 
 
-  callADSLSystemInfoService(body) {
-    let token = localStorage.getItem('token');
-    // let headers = new Headers();
-    // headers.append('Jwt', token);
-    // return this.http.post(this.apiURL + '/api/user/adsl/systeminfo', body, headers);
+  callADSLSystemInfoService(body): Observable<HttpResponse<ADSLSystemInfo>> {
+
+    const httpOptions = {
+      observe: 'response',
+      headers: new HttpHeaders({
+        'Jwt': localStorage.getItem('token')
+      })
+    };
+
+    return this.http.post<ADSLSystemInfo>(this.apiURL + '/api/user/adsl/systeminfo', body, {observe: 'response'});
   }
 
 

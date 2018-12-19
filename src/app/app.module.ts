@@ -15,6 +15,7 @@ import { AsdlPaymentComponent } from './parent/asdl-payment/asdl-payment.compone
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AsdlRenewalComponent } from './parent/asdl-renewal/asdl-renewal.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     FooterComponent,
     LandingComponent,
     ParentComponent,
-    AsdlPaymentComponent
+    AsdlPaymentComponent,
+    AsdlRenewalComponent
   ],
   imports: [
     BrowserModule,
