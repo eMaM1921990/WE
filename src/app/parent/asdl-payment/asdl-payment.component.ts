@@ -38,6 +38,7 @@ export class AsdlPaymentComponent implements OnInit {
 
   tokenModel: TokenModel;
   adslSysInfo: ADSLSystemInfo;
+  hasError = false;
 
   constructor(private weService: WeService, private router: Router,) {
 
@@ -48,17 +49,15 @@ export class AsdlPaymentComponent implements OnInit {
     this.weService.generateToken().subscribe(
       (res) => {
         this.tokenModel = res.body;
+        localStorage.setItem('token', this.tokenModel.body.jwt);
       }
     );
   }
 
   onSubmit(onSubmit: NgForm) {
-    console.log(onSubmit.value);
-    console.log(this.verifyLandLine);
     this.asdlSystemInfo.header.msisdn = this.verifyLandLine.landLine;
     this.asdlSystemInfo.body.phoneNumber = this.verifyLandLine.landLine;
     this.asdlSystemInfo.body.areaCode = this.verifyLandLine.govCode;
-    this.router.navigate(['/we/asdl-renewal']);
 
     this.weService.callADSLSystemInfoService(this.asdlSystemInfo)
       .subscribe((res) => {
@@ -69,9 +68,16 @@ export class AsdlPaymentComponent implements OnInit {
             } else if (this.adslSysInfo.body.systemType === 'Simba') {
               window.location.href = this.adslSysInfo.body.redirectURL;
             } else {
+              this.hasError = true;
             }
           } else {
-            this.router.navigate(['/we/asdl-renewal']);
+            this.router.navigate(['/we/asdl-renewal'], {
+              queryParams: {
+                'msisdn': this.asdlSystemInfo.header.msisdn,
+                'landline': this.asdlSystemInfo.body.phoneNumber,
+                'email': this.verifyLandLine.email
+              }
+            });
 
           }
 
