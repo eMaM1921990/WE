@@ -14,6 +14,7 @@ import { ParentComponent } from './parent/parent.component';
 import { AsdlPaymentComponent } from './parent/asdl-payment/asdl-payment.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import {MaterialModule} from './material.module';
     ReactiveFormsModule,
     FormsModule,
     MaterialModule,
+    BrowserAnimationsModule,
   ],
   providers: [WeService],
   bootstrap: [AppComponent]

@@ -13,25 +13,15 @@ export class WeService {
   }
 
   generateToken() {
-    this.http.get(this.apiURL + '/api/user/generatetoken?channelId=WEB_APP').subscribe(
-      (res) => {
-        if (res) {
-          localStorage.setItem('token', res['body']['jwt'] );
-          return res['body']['jwt'];
-        }
-      }
-    );
+    return this.http.get(this.apiURL + '/api/user/generatetoken?channelId=WEB_APP', {observe: 'response'});
   }
 
-  callADSLPaymentInfoService(body) {
+
+  callADSLSystemInfoService(body) {
     let token = localStorage.getItem('token');
-    this.http.post(this.apiURL + '/api/user/adsl/systeminfo', body ).subscribe(
-      (res) => {
-        if (res) {
-          return res['body']['jwt'];
-        }
-      }
-    );
+    let headers = new Headers();
+    headers.append('Jwt', token);
+    return this.http.post(this.apiURL + '/api/user/adsl/systeminfo', body, headers);
   }
 
 
