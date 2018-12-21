@@ -1,0 +1,137 @@
+[
+  {
+    "enName": "Behera",
+    "arName": "البحيرة",
+    "areaCode": "045"
+  },
+  {
+    "enName": "Sharkeya",
+    "arName": "الشرقية",
+    "areaCode": "055"
+  },
+  {
+    "enName": "Gharbeya",
+    "arName": "الغربية",
+    "areaCode": "040"
+  },
+  {
+    "enName": "Fayoum",
+    "arName": "الفيوم",
+    "areaCode": "084"
+  },
+  {
+    "enName": "Cairo",
+    "arName": "القاهرة",
+    "areaCode": "02"
+  },
+  {
+    "enName": "Qalioubeya",
+    "arName": "القليوبية",
+    "areaCode": "013"
+  },
+  {
+    "enName": "Aswan",
+    "arName": "أسوان",
+    "areaCode": "097"
+  },
+  {
+    "enName": "Assiut",
+    "arName": "أسيوط",
+    "areaCode": "088"
+  },
+  {
+    "enName": "Alexandria",
+    "arName": "الاسكندرية",
+    "areaCode": "03"
+  },
+  {
+    "enName": "Bahr Ahmar",
+    "arName": "البحر الأحمر",
+    "areaCode": "065"
+  },
+  {
+    "enName": "Giza",
+    "arName": "الجيزة",
+    "areaCode": "02"
+  },
+  {
+    "enName": "Daqahleya",
+    "arName": "الدقهلية",
+    "areaCode": "050"
+  },
+  {
+    "enName": "Suez",
+    "arName": "السويس",
+    "areaCode": "062"
+  },
+  {
+    "enName": "Menoufeya",
+    "arName": "المنوفية",
+    "areaCode": "048"
+  },
+  {
+    "enName": "Menia",
+    "arName": "المنيا",
+    "areaCode": "086"
+  },
+  {
+    "enName": "El-Wadi El-Gedid",
+    "arName": "الوادي الجديد",
+    "areaCode": "09"
+  },
+  {
+    "enName": "Beni Suef",
+    "arName": "بني سويف",
+    "areaCode": "082"
+  },
+  {
+    "enName": "Port Said",
+    "arName": "بورسعيد",
+    "areaCode": "066"
+  },
+  {
+    "enName": "Ganoub Sinaa",
+    "arName": "جنوب سيناء",
+    "areaCode": "069"
+  },
+  {
+    "enName": "Domyat",
+    "arName": "دمياط",
+    "areaCode": "057"
+  },
+  {
+    "enName": "Shouhag",
+    "arName": "سوهاج",
+    "areaCode": "093"
+  },
+  {
+    "enName": "Shamal Sinaa",
+    "arName": "شمال سيناء",
+    "areaCode": "068"
+  },
+  {
+    "enName": "Qena",
+    "arName": "قــنـــا",
+    "areaCode": "096"
+  },
+  {
+    "enName": "Kafr El Sheikh",
+    "arName": "كفر الشيخ",
+    "areaCode": "047"
+  },
+  {
+    "enName": "Matrouh",
+    "arName": "مطروح",
+    "areaCode": "046"
+  },
+  {
+    "enName": "Luxor",
+    "arName": "الأقصر",
+    "areaCode": "095"
+  },
+  {
+    "enName": "Ismaalia",
+    "arName": "الاسماعيلية",
+    "areaCode": "064"
+  }
+]

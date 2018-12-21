@@ -26,7 +26,7 @@
               <mat-form-field appearance="outline">
                 <mat-label>Governments</mat-label>
                 <mat-select matInput placeholder="Select Government" name="govCode"  #govCode="ngModel" [(ngModel)]="verifyLandLine.govCode" required>
-                  <mat-option *ngFor="let gov of governements" [value]="gov.id">{{gov.name}}</mat-option>
+                  <mat-option *ngFor="let gov of governements" [value]="gov.areaCode">{{gov.enName  }}</mat-option>
                 </mat-select>
 
 

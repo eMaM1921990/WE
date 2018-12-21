@@ -20,7 +20,7 @@ export class AsdlPaymentComponent implements OnInit {
     'email': ''
   };
   token;
-  governements = require('../../gov.json');
+  governements = require('../../governorates.json');
   asdlSystemInfo = {
     'header':
       {
@@ -39,6 +39,7 @@ export class AsdlPaymentComponent implements OnInit {
   tokenModel: TokenModel;
   adslSysInfo: ADSLSystemInfo;
   hasError = false;
+  amount: number
 
   constructor(private weService: WeService, private router: Router,) {
 

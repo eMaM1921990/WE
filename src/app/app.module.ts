@@ -21,6 +21,7 @@ import {TermsComponent} from './parent/terms/terms.component';
 import {MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material';
 import { AdslFinalizePaymentComponent } from './parent/adsl-finalize-payment/adsl-finalize-payment.component';
 import { BankComponent } from './bank/bank.component';
+import { TranslatePipe } from './translate.pipe';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { BankComponent } from './bank/bank.component';
     CustomMinDirective,
     TermsComponent,
     AdslFinalizePaymentComponent,
-    BankComponent
+    BankComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
