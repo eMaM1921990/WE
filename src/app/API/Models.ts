@@ -61,23 +61,23 @@ export interface ADSLPaymentInfoRq {
 export interface ADSLPaymentInfoRs {
   header:
     {
-      timstamp:number,
-      customerId:string,
-      msisdn:string,
-      messageCode:string,
-      responseCode:string,
-      responseMessage:string,
-      locale:string,
-      referenceId:string,
-      channelId:string,
-      responeAdditionalParameters:string
+      timstamp: number,
+      customerId: string,
+      msisdn: string,
+      messageCode: string,
+      responseCode: string,
+      responseMessage: string,
+      locale: string,
+      referenceId: string,
+      channelId: string,
+      responeAdditionalParameters: string
     },
   body:
     {
-      subscriberType:string,
-      subscriptionFee:number,
-      minPaidAmount:number,
-      renewalDate:string
+      subscriberType: string,
+      subscriptionFee: number,
+      minPaidAmount: number,
+      renewalDate: string
     }
 }
 

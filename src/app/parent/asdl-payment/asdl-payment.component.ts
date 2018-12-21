@@ -64,7 +64,13 @@ export class AsdlPaymentComponent implements OnInit {
           if (res.ok) {
             this.adslSysInfo = res.body;
             if (this.adslSysInfo.body.systemType === 'BSS') {
-              this.router.navigate(['/we/asdl-renewal']);
+              this.router.navigate(['/we/asdl-renewal'], {
+                queryParams: {
+                  'msisdn': this.asdlSystemInfo.header.msisdn,
+                  'landline': this.asdlSystemInfo.body.phoneNumber,
+                  'email': this.verifyLandLine.email
+                }
+              });
             } else if (this.adslSysInfo.body.systemType === 'Simba') {
               window.location.href = this.adslSysInfo.body.redirectURL;
             } else {

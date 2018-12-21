@@ -6,7 +6,7 @@
 
       <h3>Anonymous Online Bill Payment/ Balance Recharge/Subscription Renewal</h3>
       <div class="divider-lg"></div>
-<p> Customer Information</p>
+      <p> Customer Information</p>
 
       <div class="divider-sm"></div>
       <table class="table table-md">
@@ -14,7 +14,7 @@
         <tr class="table-Light">
 
           <th scope="col">Landline Number</th>
-          <td scope="col">026657677</td>
+          <td scope="col">{{msisdn}}</td>
 
         </tr>
         </thead>
@@ -22,78 +22,72 @@
         <tr>
 
           <th>Email address</th>
-          <td>sas@mail.com</td>
+          <td>{{email}}</td>
 
         </tr>
         <tr class="table-warning">
 
           <th scope="col">Subscription fees</th>
-          <td scope="col">134 <small>LE</small></td>
+          <td scope="col"> {{subscriptionFee}}
+            <small>LE</small>
+          </td>
 
         </tr>
 
 
         </tbody>
-        </table>
+      </table>
 
       <div class="divider-lg"></div>
 
 
+      <form #payform="ngForm" novalidate (submit)="!payform.invalid && onSubmit(payform)">
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field appearance="outline">
+              <mat-label>Enter amount</mat-label>
+              <input matInput placeholder="0.0" type="number" required name="amount" #amount="ngModel"
+                     [(ngModel)]="ADSLPaymentInfoRsModel.body.subscriptionFee"/>
+              <span matSuffix class="ml-2 mr-2">EGP</span>
+
+              <mat-hint align="start">Dear customer, you can enter a valid amount to be charged with from above form
+              </mat-hint>
+
+              <mat-error *ngIf="amount.invalid && (amount.dirty || amount.touched)">
+                <div *ngIf="amount.errors.required">
+                  Amount is required.
+                </div>
+              </mat-error>
+            </mat-form-field>
+
+          </div>
+
+        </div>
 
 
-<div class="row">
-  <div class="col-md-6">
+        <div class="divider-lg"></div>
+        <div class="divider-sm"></div>
 
+        <div class="row">
+          <div class="col-12">
+            <mat-checkbox></mat-checkbox>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Enter amount</mat-label>
-      <input matInput placeholder="0.0" type="number" required minlength="7">
-      <span matSuffix class="ml-2 mr-2">EGP</span>
-      <mat-hint align="start">Dear customer, you can enter a valid amount to be charged with from above form</mat-hint>
-    </mat-form-field>
-
-
-  </div>
-
-</div>
-      <div class="divider-lg"></div>
-      <div class="divider-sm"></div>
-
-      <div class="row">
-        <div class="col-12">
-          <mat-checkbox formControlName="hideRequired"></mat-checkbox><a href="" data-toggle="modal" data-target="#exampleModalLong">I agree the term's & conditions</a>
-        </div></div>
-      <div class="divider-sm"></div>
-
-
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <a  (click)="openTermsAndCoditionDialog()">I agree the term's & conditions</a>
           </div>
         </div>
-      </div>
+        <div class="divider-sm"></div>
+
+
+        <div>
+
+          <button type="submit" class=" btn inline-block ">Proceed to payment</button>
+          <button type="button" class=" btn inline-block ml-3 outline ">change number</button>
+        </div>
+
+      </form>
 
 
 
-      <div>
-
-        <button type="submit" class=" btn inline-block ">Proceed to payment </button>
-        <button type="submit" class=" btn inline-block ml-3 outline ">change number</button>
-      </div>
     </div>
 
   </div>

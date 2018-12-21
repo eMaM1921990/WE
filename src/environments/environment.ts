@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseURL: 'https://b673d278-02cb-4e3c-91f8-a8d731218198.mock.pstmn.io'
+  baseURL: 'https://1f0d43d6-1add-4e3a-be4c-220f9ce976fd.mock.pstmn.io'
 };
 
 /*
