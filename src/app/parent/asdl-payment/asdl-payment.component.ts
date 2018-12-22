@@ -39,7 +39,7 @@ export class AsdlPaymentComponent implements OnInit {
   tokenModel: TokenModel;
   adslSysInfo: ADSLSystemInfo;
   hasError = false;
-  amount: number
+  amount: number;
 
   constructor(private weService: WeService, private router: Router,) {
 
@@ -73,7 +73,7 @@ export class AsdlPaymentComponent implements OnInit {
                 }
               });
             } else if (this.adslSysInfo.body.systemType === 'Simba') {
-              window.location.href = this.adslSysInfo.body.redirectURL;
+              window.location.href = this.adslSysInfo.body.redirectURL + '?msisdn=' + this.asdlSystemInfo.header.msisdn + '&landline=' + this.asdlSystemInfo.body.phoneNumber + '&email=' + this.verifyLandLine.email;
             } else {
               this.hasError = true;
             }
