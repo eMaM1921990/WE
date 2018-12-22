@@ -99,7 +99,7 @@ export class AsdlRenewalComponent implements OnInit {
           if (this.InitiatePaymentRsModel.header.responseCode === '0') {
             localStorage.setItem('payment-ref', JSON.stringify(this.InitiatePaymentRsModel));
             localStorage.setItem('customer-email', this.email);
-            window.location.href = 'http://localhost:4200/bank';
+            window.location.href = 'http://localhost:4200/bank?transactionHashCode'+this.InitiatePaymentRsModel.body.hashCode;
           } else {
             // show error message
             console.log(this.InitiatePaymentRsModel.header.responseMessage);

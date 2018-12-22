@@ -6,21 +6,28 @@
 
       <h3>Anonymous Online Bill Payment/ Balance Recharge/Subscription Renewal</h3>
       <div class="divider-lg"></div>
-      <p> Customer Information {{amount.value}}  {{ADSLPaymentInfoRsModel.body.subscriptionFee}} </p>
+      <p> Customer Information </p>
 
-      <!--<div class="alert" [hidden]="(amount.dirty || amount.touched) && (amount.value < ADSLPaymentInfoRsModel.body.minPaidAmount ? false : true)" >-->
-        <!--<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>-->
-        <!--<strong>Warning </strong>-->
-        <!--<p>The amount paid is less than the minimum payment.</p>-->
-      <!--</div>-->
-
-
-      <div class="alert" ngIf="(amount.value > ADSLPaymentInfoRsModel.body.subscriptionFee ? false : true)" >
+      <div class="alert"  *ngIf="amount.value < ADSLPaymentInfoRsModel.body.minPaidAmount ? true : false">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <strong>Warning </strong>
-        <p>“The amount paid is higher than the invoice amount, the extra amount of
-         *** will be added to your balance.</p>
+        <p>The amount paid is less than the minimum payment.</p>
       </div>
+
+      <div class="alert"  *ngIf="amount.value > subscriptionFee ? true : false">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning </strong>
+        <p>The amount paid is higher than the invoice amount, the extra amount of ({{amount.value - subscriptionFee }} EGP)  will be added to your balance</p>
+      </div>
+
+
+      <div class="alert"  *ngIf="amount.value >ADSLPaymentInfoRsModel.body.minPaidAmount && amount.value < subscriptionFee ? true : false">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning </strong>
+        <p>The paid amount is less than the invoice amount, please pay the remaining to avoid service disconnection</p>
+      </div>
+
+
 
       <div class="divider-sm"></div>
       <table class="table table-md">
@@ -55,7 +62,7 @@
       <div class="divider-lg"></div>
 
 
-      <form #payform="ngForm" novalidate (submit)="!payform.invalid && onSubmit(payform) && !(amount.value < ADSLPaymentInfoRsModel.body.minPaidAmount)">
+      <form #payform="ngForm" novalidate (submit)="!payform.invalid &&  !(amount.value < ADSLPaymentInfoRsModel.body.minPaidAmount) && onSubmit(payform) ">
         <div class="row">
           <div class="col-md-6">
             <mat-form-field appearance="outline">
@@ -85,6 +92,7 @@
         <div class="row">
           <div class="col-12">
             <mat-checkbox required></mat-checkbox>
+
 
             <a  (click)="openTermsAndCoditionDialog()">I agree the term's & conditions</a>
           </div>

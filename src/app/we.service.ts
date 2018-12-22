@@ -21,27 +21,33 @@ export class WeService {
 
   callADSLSystemInfoService(body): Observable<HttpResponse<ADSLSystemInfo>> {
 
-    const httpOptions = {
-      observe: 'response',
-      headers: new HttpHeaders({
-        'Jwt': localStorage.getItem('token')
-      })
-    };
 
-    return this.http.post<ADSLSystemInfo>(this.apiURL + '/api/user/adsl/systeminfo', body, {observe: 'response'});
+    return this.http.post<ADSLSystemInfo>(this.apiURL + '/api/user/adsl/systeminfo', body, {
+      headers: new HttpHeaders({'Jwt': localStorage.getItem('token')}),
+      observe: 'response'
+    });
   }
 
   callADSLPaymentInfo(body): Observable<HttpResponse<ADSLPaymentInfoRs>> {
-    return this.http.post<ADSLPaymentInfoRs>(this.apiURL + '/api/user/adsl/paymentinfo', body, {observe: 'response'});
+    return this.http.post<ADSLPaymentInfoRs>(this.apiURL + '/api/user/adsl/paymentinfo', body, {
+      headers: new HttpHeaders({'Jwt': localStorage.getItem('token')}),
+      observe: 'response'
+    });
   }
 
   callADSLPaymentInitiate(body): Observable<HttpResponse<InitiatePaymentRs>> {
-    return this.http.post<InitiatePaymentRs>(this.apiURL + '/api/payment/pay/unregisteredcard/initiate', body, {observe: 'response'});
+    return this.http.post<InitiatePaymentRs>(this.apiURL + '/api/payment/pay/unregisteredcard/initiate', body, {
+      headers: new HttpHeaders({'Jwt': localStorage.getItem('token')}),
+      observe: 'response'
+    });
   }
 
 
   callADSLPaymentFinalize(body): Observable<HttpResponse<FinalizePaymentRs>> {
-    return this.http.post<FinalizePaymentRs>(this.apiURL + '/api/payment/pay/unregisteredcard/finalize', body, {observe: 'response'});
+    return this.http.post<FinalizePaymentRs>(this.apiURL + '/api/payment/pay/unregisteredcard/finalize', body, {
+      headers: new HttpHeaders({'Jwt': localStorage.getItem('token')}),
+      observe: 'response'
+    });
   }
 
 }

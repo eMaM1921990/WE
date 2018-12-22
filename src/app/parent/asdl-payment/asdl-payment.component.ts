@@ -78,14 +78,7 @@ export class AsdlPaymentComponent implements OnInit {
               this.hasError = true;
             }
           } else {
-            this.router.navigate(['/we/asdl-renewal'], {
-              queryParams: {
-                'msisdn': this.asdlSystemInfo.header.msisdn,
-                'landline': this.asdlSystemInfo.body.phoneNumber,
-                'email': this.verifyLandLine.email
-              }
-            });
-
+            this.hasError = true;
           }
 
         }
