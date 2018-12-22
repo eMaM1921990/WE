@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -8,18 +8,22 @@ import {Router} from '@angular/router';
 })
 export class LandingComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  routing: string;
+
+  constructor(private route: Router) {
+  }
 
   ngOnInit() {
   }
 
 
-  goToNext(){
-    this.route.navigate(['/we/recharge']);
-  }
-
-  goOut(){
-    window.location.href = 'https://my.te.eg/#/payment/rechargeAnonymous';
+  finish(event) {
+    console.log((event.value === '1'));
+    if (event.value === '1') {
+      this.route.navigate(['/we/asdl-payment']);
+    } else {
+      window.location.href = 'https://my.te.eg/#/payment/rechargeAnonymous';
+    }
   }
 
 }

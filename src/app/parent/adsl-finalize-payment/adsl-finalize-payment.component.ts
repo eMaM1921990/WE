@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FinalizePaymentRq, FinalizePaymentRs, InitiatePaymentRs} from '../../API/Models';
 import {WeService} from '../../we.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-adsl-finalize-payment',
@@ -14,7 +15,7 @@ export class AdslFinalizePaymentComponent implements OnInit {
   FinalizePaymentRsModel: FinalizePaymentRs;
   hasError = false;
 
-  constructor(private service: WeService) {
+  constructor(private service: WeService, private route:Router) {
   }
 
   ngOnInit() {
@@ -43,6 +44,11 @@ export class AdslFinalizePaymentComponent implements OnInit {
         localStorage.removeItem('payment-ref');
       }
     );
+  }
+
+
+  goBack(){
+    this.route.navigate(['/we/recharge']);
   }
 
 }
