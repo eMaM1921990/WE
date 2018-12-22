@@ -3,3 +3,24 @@
 .outline{ border: 2px solid #962071; color: #962071;; background-color: #fff}
 .outline:hover{ border: 2px solid #702283; color: #702283;; background-color: #fff}
 .table-warning, .table-warning > th, .table-warning > td {background-color: #f8f8f8;}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
