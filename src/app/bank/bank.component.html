@@ -1,3 +1,158 @@
-<p>
+<!--<p>
   <a href="http://localhost:4200/we/payment-finalize"> Confirm </a>
-</p>
+</p>-->
+
+
+
+<header class="clearfix ">
+  <div class="w-100 widescreen">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left">
+        <div class="topstrip"></div>
+        <div class="header__logo">
+        <div class="container">
+        <div class="navbar-brand">
+
+
+            <a href=""><img class="img-responsive pull-left" src="./../assets/images/logo.png" alt=""></a>
+          </div>
+        </div>
+        <!-- branding -->
+
+
+      </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<div class="row">
+<div class="col-12">
+  <div class="container">
+<h3>Select Your Payment</h3>
+<div class="divider-md"></div>
+
+    <mat-radio-group>
+      <mat-radio-button value="1" class="mr-3"><img class="img-responsive" src="../../assets/images/visaLogo_T.png"></mat-radio-button>
+      <mat-radio-button value="2" class="ml-3"><img class="img-responsive" src="../../assets/images/masterLogo_T.png"></mat-radio-button>
+    </mat-radio-group>
+
+
+  </div></div>
+</div>
+<div class="divider-lg"></div>
+
+
+<div class="container">
+<div class="row">
+
+  <div class="col-md-6">
+    <mat-form-field appearance="outline">
+      <mat-label>Card Name</mat-label>
+      <input matInput placeholder="Card Name">
+
+    <!--  <mat-hint>Hint</mat-hint>-->
+    </mat-form-field>
+
+  </div>
+
+
+    <div class="col-md-6">
+      <mat-form-field appearance="outline">
+        <mat-label>Card Number</mat-label>
+        <input matInput placeholder="Card Number">
+
+          <mat-hint>Enter 12 number </mat-hint>
+      </mat-form-field>
+
+    </div>
+
+
+  </div>
+
+<div class="divider-lg"></div>
+  <div class="row">
+    <label class="align-self-center expiry">Expiry Date: </label>
+    <div class="col-3">
+      <mat-form-field appearance="outline">
+        <mat-select placeholder="month" >
+          <mat-option value="option">1</mat-option>
+          <mat-option value="option">2</mat-option>
+        </mat-select>
+
+      </mat-form-field>
+    </div>
+
+    <div class="col-3">
+      <mat-form-field appearance="outline">
+        <mat-select placeholder="Day" >
+          <mat-option value="option">1</mat-option>
+          <mat-option value="option">2</mat-option>
+        </mat-select>
+
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <mat-form-field appearance="outline">
+        <mat-label>Enter CVV</mat-label>
+        <input matInput placeholder="CVV Number">
+
+        <mat-hint>Enter 4 number </mat-hint>
+      </mat-form-field>
+    </div>
+
+
+
+  </div>
+
+  <div class="divider-md"></div>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <mat-form-field appearance="outline">
+        <mat-label>Mobile number</mat-label>
+        <input matInput placeholder="Mobile Number">
+        <mat-icon matSuffix><i class="fa fa-mobile-alt"></i></mat-icon>
+        <mat-hint>Enter 12 number </mat-hint>
+      </mat-form-field>
+
+    </div>
+  </div>
+
+  <div class="divider-md"></div>
+
+  <span>Total amount</span> <div class="amount">125.4 EGP</div>
+
+  <div class="divider-md"></div>
+
+<div class="row">
+  <div class="col-12">
+
+ <!--   <button class="btn btn-md lighttext  pr-3 pl-3" >PAY NOW</button>-->
+    <a href="http://localhost:4200/we/payment-finalize" class="btn btn-md lighttext  pr-3 pl-3"> PAY NOW</a>
+
+  </div>
+</div>
+
+  <div class="divider-lg"></div>
+</div>
+<!--tsets-->
+
+
+
+<div class=" widescreen ">
+  <footer>
+    <div class="footer w-100 p-5">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <span class="copyright">Copyright © 2018 TE. All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</div>

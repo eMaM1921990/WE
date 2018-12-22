@@ -1,0 +1,9 @@
+
+.massage i, .massage h3{ display: inline-block}
+.massage i{ font-size: 35px; margin-right: 10px; color: #ba3c93}
+.massage h3{  color: #fff }
+.massage small{   display: block;margin-left: 50px; color: #b9b7b7;
+
+  font-size: 14px;}
+
+.massage { background: #702283 ;padding: 2.2em;border-radius: 5px;}

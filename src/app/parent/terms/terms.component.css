@@ -1,0 +1,7 @@
+.WCM_Section .block{background:#fff;border:1px solid #ddd;position:relative;padding:10px}
+.WCM_Section table {border:1px solid #ddd;width:100%;line-height:3;font-size:15px!important;border-collapse:collapse;border-spacing:0;}
+.WCM_Section table th{font-weight:700}
+.WCM_Section table tr:nth-child(odd){background-color:#f8f8f8}
+
+.terms{ cursor: pointer; }
+.terms:hover{color: #4f113b }
