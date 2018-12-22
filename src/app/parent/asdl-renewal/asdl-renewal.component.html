@@ -8,25 +8,6 @@
       <div class="divider-lg"></div>
       <p> Customer Information </p>
 
-      <div class="alert"  *ngIf="amount.value < ADSLPaymentInfoRsModel.body.minPaidAmount ? true : false">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <strong>Warning </strong>
-        <p>The amount paid is less than the minimum payment.</p>
-      </div>
-
-      <div class="alert"  *ngIf="amount.value > subscriptionFee ? true : false">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <strong>Warning </strong>
-        <p>The amount paid is higher than the invoice amount, the extra amount of ({{amount.value - subscriptionFee }} EGP)  will be added to your balance</p>
-      </div>
-
-
-      <div class="alert"  *ngIf="amount.value >ADSLPaymentInfoRsModel.body.minPaidAmount && amount.value < subscriptionFee ? true : false">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <strong>Warning </strong>
-        <p>The paid amount is less than the invoice amount, please pay the remaining to avoid service disconnection</p>
-      </div>
-
 
 
       <div class="divider-sm"></div>
@@ -60,6 +41,28 @@
       </table>
 
       <div class="divider-lg"></div>
+
+      <div class="alert"  *ngIf="amount.value < ADSLPaymentInfoRsModel.body.minPaidAmount ? true : false">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning </strong>
+        <p>The amount paid is less than the minimum payment.</p>
+      </div>
+
+      <div class="alert"  *ngIf="amount.value > subscriptionFee ? true : false">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning </strong>
+        <p>The amount paid is higher than the invoice amount, the extra amount of ( <strong>{{amount.value - subscriptionFee }}</strong> EGP)  will be added to your balance</p>
+      </div>
+
+
+      <div class="alert"  *ngIf="amount.value >ADSLPaymentInfoRsModel.body.minPaidAmount && amount.value < subscriptionFee ? true : false">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning </strong>
+        <p>The paid amount is less than the invoice amount, please pay the remaining to avoid service disconnection</p>
+      </div>
+
+
+      <div class="divider-md"></div>
 
 
       <form #payform="ngForm" novalidate (submit)="!payform.invalid && term.checked && !(amount.value < ADSLPaymentInfoRsModel.body.minPaidAmount) && onSubmit(payform) ">
@@ -99,6 +102,7 @@
 
             <a role="button"  (click)="openTermsAndCoditionDialog()" class="ml-3 terms" >I agree the term's & conditions</a>
           </div>
+          <div class="divider-md"></div>
         </div>
         <div class="divider-sm"></div>
 
