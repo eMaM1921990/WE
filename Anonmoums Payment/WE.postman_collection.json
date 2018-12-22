@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "73d755a0-e939-420f-90dc-107b4cbd300a",
+		"name": "WE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GenerateToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/user/generatetoken?channelId=WEB_APP",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"generatetoken"
+					],
+					"query": [
+						{
+							"key": "channelId",
+							"value": "WEB_APP"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GenerateToken",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/user/generatetoken?channelId=WEB_APP",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"generatetoken"
+							],
+							"query": [
+								{
+									"key": "channelId",
+									"value": "WEB_APP"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"header\": {\n        \"timstamp\": 0,\n        \"customerId\": null,\n        \"msisdn\": null,\n        \"messageCode\": null,\n        \"responseCode\": \"0\",\n        \"responseMessage\": \"Success\",\n        \"locale\": null,\n        \"referenceId\": null,\n        \"channelId\": null,\n        \"responeAdditionalParameters\": null\n    },\n    \"body\": {\n        \"status\": null,\n        \"jwt\": \"eyJraWQiOiIxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJ0ZS5jb20iLCJleHAiOjI0OTA1MzIzNTAsImp0aSI6ImwzTnBnenJQUUNReVlJZWV2QWFkakEiLCJpYXQiOjE1NDQ0NTIzNTAsIm5iZiI6MTU0NDQ1MjIzMCwic3ViIjoiQW5vbnltb3VzIiwicm9sZXMiOlsiUk9MRV9BTk9OWU1PVVMiXSwiSVAiOiIxMC4xOS4yNDguMTAsIDEwLjE5LjI0Ny4yNDEiLCJjaGFubmVsSWQiOiJXRUJfQVBQIn0.x37UPw4kJ3GXlwH23gjQcLEWeQ1M1NLBHizaFsqc9ETT5mFQtnuoExraNWCy1HiPHgim7oGdAkOwmYzIuoPN5_usDQFBltvXA4YJfweRLu4mc41JiSVPCDXYPGkcKGXJhr4M05nIi4Lq4dh9O6JFSYE7fUhmMNm27lXY2WLsy8a40LrQ4FnkCdgzn9_imDapPqzLApznyGynS3OUlCA3Iop-GXnWgvsFZ1UoQp4xMNiVIDBbH4wVZ8qdfBnM7kM4bZ6Jly9j59ruE71xSz3BjlQnAibItyyczbVLYb-OZmXT08yRrbKHM0MRZ70vU-MQkEkFJI2F_ebNbVGcHpDprA\",\n        \"userType\": null,\n        \"associatedLines\": null,\n        \"role\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "adslSystemInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "adslSystemInfo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/user/adsl/systeminfo",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"adsl",
+								"systeminfo"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n\t\"header\":\n\t{\n\t\t\"timstamp\":1544451744,\n\t\t\"customerId\":\"323223\",\n\t\t\"msisdn\":\"01554260614\",\n\t\t\"messageCode\":\"\",\n\t\t\"responseCode\":\"0\",\n\t\t\"responseMessage\":\"Success\",\n\t\t\"locale\":\"En\",\n\t\t\"referenceId\":\"030541d3-fc87-11e8-8046-fa163e00c4b1\",\n\t\t\"channelId\":\"WEB_APP\",\n\t\t\"responeAdditionalParameters\":null\n\t},\n\t\"body\":\n\t{\n\t\t\"systemType\":\"BSS\",\n\t\t\"redirectURL\":\"https://www.mytedata.net/wps/portal/ssp/AnonymousRenewal/\"\n\t}\n}\n"
+				}
+			]
+		},
+		{
+			"name": "paymentinfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "paymentinfo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/user/adsl/paymentinfo",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"adsl",
+								"paymentinfo"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"header\": {\n        \"timstamp\": 1544451744,\n        \"customerId\": \"\",\n        \"msisdn\": \"01554260614\",\n        \"messageCode\": \"\",\n        \"responseCode\": \"0\",\n        \"responseMessage\": \"Success\",\n        \"locale\": \"En\",\n        \"referenceId\": \"030541d3-fc87-11e8-8046-fa163e00c4b1\",\n        \"channelId\": \"WEB_APP\",\n        \"responeAdditionalParameters\": null\n    },\n    \"body\": {\n        \"subscriberType\": \"PREPAID\",\n        \"subscriptionFee\": 1322.324,\n        \"minPaidAmount\": 224.3443,\n        \"renewalDate\": \"2018-06-15\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "initiate Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/payment/pay/unregisteredcard/initiate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"payment",
+						"pay",
+						"unregisteredcard",
+						"initiate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "initiate Payment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/pay/unregisteredcard/initiate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								"pay",
+								"unregisteredcard",
+								"initiate"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"header\": {\n        \"timstamp\": 0,\n        \"customerId\": \"\",\n        \"msisdn\": \"\",\n        \"messageCode\": \"\",\n        \"responseCode\": \"0\",\n        \"responseMessage\": \"Success\",\n        \"locale\": \"en\",\n        \"referenceId\": \"82d54241-075c-11e8-b4b2-8c705af896fc\",\n        \"responeAdditionalParameters\": null\n    },\n    \"body\": {\n        \"hashCode\": \"f01e236876fdc0a85b3ca5036bfcabc9\",\n        \"newBalanceAmount\": null,\n        \"mobileNumber\": \"01521616066\",\n        \"transactionID\": 461,\n        \"paymentSerialNo\": null,\n        \"paymentNarration\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Finalize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/payment/pay/unregisteredcard/finalize",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"payment",
+						"pay",
+						"unregisteredcard",
+						"finalize"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Finalize",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/pay/unregisteredcard/finalize",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								"pay",
+								"unregisteredcard",
+								"finalize"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"header\": {\n        \"timstamp\": 0,\n        \"customerId\": \"string\",\n        \"msisdn\": \"string\",\n        \"messageCode\": \"string\",\n        \"responseCode\": \"0\",\n        \"responseMessage\": \"Your transaction has been successfully completed Failes\",\n        \"locale\": \"en\",\n        \"referenceId\": \"fa821303-0765-11e8-95f0-8c705af896fc\",\n        \"responeAdditionalParameters\": null\n    },\n    \"body\": {\n        \"hashCode\": \"f01e236876fdc0a85b3ca5036bfcabc9\",\n        \"newBalanceAmount\": 220.21,\n        \"mobileNumber\": \"01521616066\",\n        \"transactionID\": 461,\n        \"paymentSerialNo\": \"CBSAR7002\",\n        \"paymentNarration\": \"461-24-CBSAR7002\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "7956c2fc-99ee-4d7f-a72e-ed38856f8c92",
+			"key": "url",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
